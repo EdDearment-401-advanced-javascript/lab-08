@@ -11,3 +11,7 @@ mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
 
 require('./src/app.js').start(process.env.PORT);
 
+function sayHi () {
+  document.write ('Hello World!');
+}
+sayHi();
