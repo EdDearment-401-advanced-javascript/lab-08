@@ -5,6 +5,9 @@ const category = new Category;
 
 const supergoose = require('./supergoose');
 
+beforeAll(supergoose.startDB);
+afterAll(supergoose.stopDB);
+
 describe('catagory tester', () => {
   it('can post a new category', () => {
     let categoryObj = {name:'Fruit'};
@@ -18,18 +21,19 @@ describe('catagory tester', () => {
   it('can get() a category', () => {
     let categoryObj = {name:'Fruit'};
     return category.post(categoryObj)
-    .then(product => {
-      return category.get(product._id)
-      .then(item => {
+    .then(record => {
+      return category.get(record._id)
+      .then(category => {
         Object.keys(categoryObj).forEach(key => {
-          expect(category[0][key]).toEqual(obj[key]);
+          expect(category[0][key]).toEqual(categoryObj[key]);
         });
       });
     });
   });
   it('can update a category', () => {
-    
+
   });
+
   it ('can delete a category', () => {
 
   })

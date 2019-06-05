@@ -1,4 +1,5 @@
 'use strict';
+const schema = require('./category-schema.js');
 
 class Categories {
 
