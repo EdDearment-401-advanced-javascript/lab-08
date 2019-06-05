@@ -1,7 +1,7 @@
 {
   "name": "api-server-solution",
   "version": "1.0.0",
-  "description": "",
+  "description": "Intro to Mongo",
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
@@ -16,6 +16,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
+    "eslint": "^5.16.0",
+    "eslintrc": "^1.0.6",
     "express": "^4.16.4",
     "jest": "^23.6.0",
     "mongodb-memory-server": "^2.9.1",
@@ -24,5 +26,14 @@
     "morgan": "^1.9.1",
     "supertest": "^3.3.0",
     "uuid": "^3.3.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourname-401-advanced-javascript/lab-08.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourname-401-advanced-javascript/lab-08/issues"
+  },
+  "homepage": "https://github.com/yourname-401-advanced-javascript/lab-08#readme"
 }
