@@ -1,4 +1,5 @@
 'use strict';
+const schema = require('./category-schema.js');
 
 class Categories {
 
@@ -16,10 +17,11 @@ class Categories {
   }
 
   put(_id, record) {
-    
+    return schema.findByIdAndUpdate(_id, record, {new:true})
   }
 
   delete(_id) {
+    return schema.findByIdAndDelete(_id)
   }
 
 }
