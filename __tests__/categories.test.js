@@ -31,10 +31,17 @@ describe('catagory tester', () => {
     });
   });
   it('can update a category', () => {
-
+    let categoryObj1 = {name: "Fruit"};
+    let categoryObj2 = {name: "Vegitables"};
+    return category.post(categoryObj1)
+    .then (record => {
+      return category.put()
+    })
   });
 
   it ('can delete a category', () => {
+    let categoryObj = {name: "Vegitables"};
 
-  })
+  });
+
 });
